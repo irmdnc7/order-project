@@ -1,0 +1,28 @@
+<div class="flexbox-product">
+    <div>
+    <input [(ngModel)]="filterText" class="searchbox" matInput placeholder="Aramak istediğiniz ifadeyi giriniz...">
+
+    <div class="productcard">
+      <div class="productcarditem" *ngFor="let products of product | filter:filterText">
+        <mat-card class="example-card"   >
+          <mat-card-header>
+            <div class="product">{{products.name}}</div>
+          </mat-card-header>
+          <div class="pricebox">
+            <div class="price">{{products.price | currency:'TRY'}}</div>
+          </div>
+
+          <mat-card-actions>
+            <div class="bttom">
+              <button (click)="addToBasket(products)" mat-mini-fab color="warn">+</button>
+              <button *ngIf="products.quantity>0" (click)="removeTo(products)" mat-mini-fab color="warn">-</button>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div class="basket">
+    <app-basket></app-basket>
+  </div>
+</div>

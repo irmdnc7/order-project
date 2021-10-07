@@ -1,0 +1,38 @@
+.flexboxbasket {
+    height:80%;
+    width: 400px;;
+    justify-content: space-between;
+}
+
+
+.header{
+    width: 400px;
+    height:5%;
+    text-align: left;
+    padding: 8px;
+
+  }
+.product{
+  width: 400px;
+  text-align: left;
+  padding: 8px;
+
+}
+td {
+  display: table-cell;
+  vertical-align: inherit;
+  padding:5px 5px 10px 10px;;
+}
+.del{
+  display: flex;
+    box-shadow: b;
+    border-spacing: 2px;
+    background-color:#F44336;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;;
+
+}
+
+
+

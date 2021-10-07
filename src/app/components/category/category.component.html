@@ -1,0 +1,5 @@
+
+<mat-nav-list  class="category-item">
+  <mat-list-item (click)="setCurrentCategory(Category.name)" *ngFor="let Category of categories" class="category-item"
+    [routerLink]="['/products/category',Category.id]">{{Category.name}}</mat-list-item>
+</mat-nav-list>

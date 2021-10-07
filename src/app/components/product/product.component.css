@@ -1,0 +1,33 @@
+.example-card {
+    max-width: 400px;
+  }
+  .flexbox-product {
+    display: flex;
+    width: 100%;
+}
+
+.productcard {
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.basket {
+    width: 40%;
+    display: flex;
+}
+.searchbox{
+  width:58%;
+}
+
+.productcarditem {
+  width: 45%;
+  margin: 10px;
+  min-height: 200px !important;
+  height: 200px !important;
+}
+.titleproduct {
+  font-size: 14px !important;
+}

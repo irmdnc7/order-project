@@ -1,0 +1,31 @@
+<div class="flexboxbasket" *ngIf="basket.totalQuantity>0">
+    <div class="mat-elevation-z2">
+        <table class="header">
+            <tr>
+                <th>{{productName}}</th>
+                <th>{{quantity}}</th>
+                <th>{{productPrice}}</th>
+
+            </tr>
+        </table>
+            <table class="product" *ngFor="let basket of product">
+                <tr *ngIf="basket.quantity>0">
+                    <td>{{basket.name}}</td>
+                    <td>{{basket.quantity}}</td>
+                    <td>{{basket.totalPrice}}</td>
+                    <div  class="del" (click)="removeT(basket)">X</div>
+                </tr>
+            </table>
+            <table class="basket-total">
+            <tr>
+                <th>{{TotalPrice}}</th>
+                <td>{{basket.totalPrice}}</td>
+            </tr>
+            <tr>
+                <th>{{TotalQuantity}}</th>
+                <td>{{basket.totalQuantity}}</td>
+            </tr>
+        </table>
+        <button (click)="clear(basket)" mat-flat-button color="warn">Sepeti Temizle</button>
+    </div>
+</div>
